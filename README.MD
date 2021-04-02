@@ -31,7 +31,7 @@ apps, err := client.ActiveApp()
 
 // launch the YouTube app
 youtube := "837"
-err := client.Launch(youtube)
+err := client.Launch(youtube, "yk8yvt5lWVc", "")
 ```
 
 ## Command line tool
