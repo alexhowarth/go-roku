@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<device-info>
+        <udn>29600003-1006-100e-805e-10593205991b</udn>
+        <serial-number>YA0074396894</serial-number>
+        <device-id>255072396894</device-id>
+        <advertising-id>001dd220-62e3-5d0a-8995-3dd42bdc5ca3</advertising-id>
+        <vendor-name>Roku</vendor-name>
+        <model-name>Roku Streaming Stick+</model-name>
+        <model-number>3811X</model-number>
+        <model-region>US</model-region>
+        <is-tv>false</is-tv>
+        <is-stick>true</is-stick>
+        <ui-resolution>1080p</ui-resolution>
+        <supports-ethernet>false</supports-ethernet>
+        <wifi-mac>10:59:31:05:99:1b</wifi-mac>
+        <wifi-driver>realtek</wifi-driver>
+        <has-wifi-extender>false</has-wifi-extender>
+        <has-wifi-5G-support>true</has-wifi-5G-support>
+        <can-use-wifi-extender>true</can-use-wifi-extender>
+        <network-type>wifi</network-type>
+        <network-name>foofi</network-name>
+        <friendly-device-name>Alex&apos;s Roku Streaming Stick+</friendly-device-name>
+        <friendly-model-name>Roku Streaming Stick+</friendly-model-name>
+        <default-device-name>Roku Streaming Stick+ - YH0024396894</default-device-name>
+        <user-device-name>Alex&apos;s Roku Streaming Stick+</user-device-name>
+        <user-device-location>Living room</user-device-location>
+        <build-number>509.40E04200A</build-number>
+        <software-version>9.4.0</software-version>
+        <software-build>4200</software-build>
+        <secure-device>true</secure-device>
+        <language>en</language>
+        <country>US</country>
+        <locale>en_US</locale>
+        <time-zone-auto>true</time-zone-auto>
+        <time-zone>US/Eastern</time-zone>
+        <time-zone-name>United States/Eastern</time-zone-name>
+        <time-zone-tz>America/New_York</time-zone-tz>
+        <time-zone-offset>-300</time-zone-offset>
+        <clock-format>24-hour</clock-format>
+        <uptime>2483897</uptime>
+        <power-mode>PowerOn</power-mode>
+        <supports-suspend>false</supports-suspend>
+        <supports-find-remote>true</supports-find-remote>
+        <find-remote-is-possible>false</find-remote-is-possible>
+        <supports-audio-guide>true</supports-audio-guide>
+        <supports-rva>true</supports-rva>
+        <developer-enabled>true</developer-enabled>
+        <keyed-developer-id/>
+        <search-enabled>true</search-enabled>
+        <search-channels-enabled>true</search-channels-enabled>
+        <voice-search-enabled>true</voice-search-enabled>
+        <notifications-enabled>true</notifications-enabled>
+        <notifications-first-use>false</notifications-first-use>
+        <supports-private-listening>true</supports-private-listening>
+        <headphones-connected>false</headphones-connected>
+        <supports-ecs-textedit>true</supports-ecs-textedit>
+        <supports-ecs-microphone>true</supports-ecs-microphone>
+        <supports-wake-on-wlan>false</supports-wake-on-wlan>
+        <has-play-on-roku>true</has-play-on-roku>
+        <has-mobile-screensaver>true</has-mobile-screensaver>
+        <support-url>roku.com/support</support-url>
+        <grandcentral-version>4.4.35</grandcentral-version>
+        <trc-version>3.0</trc-version>
+        <trc-channel-version>4.2.3</trc-channel-version>
+        <davinci-version>2.8.20</davinci-version>
+</device-info>
