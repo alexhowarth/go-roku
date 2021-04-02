@@ -17,11 +17,11 @@ go get github.com/alexhowarth/go-roku
 roku.Search()
 
 // build a client
-client := config.NewClient("http://192.168.0.21:8060")
+client := roku.NewClient("http://192.168.0.21:8060")
 
 // build a client, overriding the default http.Client
 httpClient := &http.Client{} // customise as required
-client := config.NewClient("http://192.168.0.21:8060", WithHttpClient(httpClient))
+client := roku.NewClient("http://192.168.0.21:8060", WithHttpClient(httpClient))
 
 // get information about the device
 info, err := client.DeviceInfo()
