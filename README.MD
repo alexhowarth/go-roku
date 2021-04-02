@@ -43,6 +43,10 @@ To install and use it:
 $ go install ./roku-cli
 $ roku-cli --help
 ```
+
+There are also pre-built binaries for various architectures [here](https://github.com/alexhowarth/go-roku/releases).
+
+To extract certain data from the output, you might use jq.
 ## API
 
 Documentation for the API can be found at [https://developer.roku.com](https://developer.roku.com/docs/developer-program/debugging/external-control-api.md)
