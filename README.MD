@@ -29,7 +29,7 @@ info, err := client.DeviceInfo()
 // find the active app
 app, err := client.ActiveApp()
 
-// display all apps on the device
+// find all apps on the device
 apps, err := client.Apps()
 
 // launch the YouTube app
