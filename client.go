@@ -18,27 +18,28 @@ var endpointMap = map[string]string{
 	"launch": "/launch/%s?contentId=%s&mediaType=%s",
 }
 
-type client struct {
+// Client for Roku ECP
+type Client struct {
 	BaseURL    *url.URL
 	httpClient *http.Client
 }
 
 // ClientOption is a type that can be passed to the NewClient constructor for configuration
-type ClientOption func(*client)
+type ClientOption func(*Client)
 
 // NewClient constructs a client using the address argument
 // ClientOptions can be passed in if required
-func NewClient(addr string, opts ...ClientOption) (*client, error) {
+func NewClient(addr string, opts ...ClientOption) (*Client, error) {
 	if addr == "" {
-		return &client{}, errors.New("url is required")
+		return &Client{}, errors.New("url is required")
 	}
 
 	u, err := url.Parse(addr)
 	if err != nil {
-		return &client{}, err
+		return &Client{}, err
 	}
 
-	c := &client{
+	c := &Client{
 		BaseURL:    u,
 		httpClient: &http.Client{},
 	}
@@ -53,12 +54,12 @@ func NewClient(addr string, opts ...ClientOption) (*client, error) {
 // WithHttpClient is a ClientOption that swaps out the default http.Client
 // This is useful for testing/customising the client
 func WithHttpClient(hc *http.Client) ClientOption {
-	return func(c *client) {
+	return func(c *Client) {
 		c.httpClient = hc
 	}
 }
 
-func (c *client) get(path string) (*http.Response, error) {
+func (c *Client) get(path string) (*http.Response, error) {
 
 	rel := &url.URL{Path: path}
 	u := c.BaseURL.ResolveReference(rel)
@@ -72,7 +73,7 @@ func (c *client) get(path string) (*http.Response, error) {
 }
 
 // DeviceInfo returns info on the device
-func (c *client) DeviceInfo() (*DeviceInfo, error) {
+func (c *Client) DeviceInfo() (*DeviceInfo, error) {
 
 	resp, err := c.get(endpointMap["info"])
 	if err != nil {
@@ -90,7 +91,7 @@ func (c *client) DeviceInfo() (*DeviceInfo, error) {
 }
 
 // Apps returns information on the apps installed on the device
-func (c *client) Apps() (*Apps, error) {
+func (c *Client) Apps() (*Apps, error) {
 
 	resp, err := c.get(endpointMap["apps"])
 	if err != nil {
@@ -108,7 +109,7 @@ func (c *client) Apps() (*Apps, error) {
 }
 
 // ActiveApp returns the current app in use on the device
-func (c *client) ActiveApp() (*ActiveApp, error) {
+func (c *Client) ActiveApp() (*ActiveApp, error) {
 
 	resp, err := c.get(endpointMap["active"])
 	if err != nil {
@@ -126,7 +127,7 @@ func (c *client) ActiveApp() (*ActiveApp, error) {
 }
 
 // Launch a channel on the device
-func (c *client) Launch(channelID string, contentID string, mediaType string) error {
+func (c *Client) Launch(channelID string, contentID string, mediaType string) error {
 	rel, err := c.BaseURL.Parse(fmt.Sprintf(endpointMap["launch"], channelID, contentID, mediaType))
 	if err != nil {
 		return err
