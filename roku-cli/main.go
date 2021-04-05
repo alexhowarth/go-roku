@@ -1,4 +1,4 @@
-// Package main provides a command line interface to roku-cli
+// Package main provides a command line interface to go-roku
 package main
 
 import "github.com/alexhowarth/go-roku/roku-cli/cmd"

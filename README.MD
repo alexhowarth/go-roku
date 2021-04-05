@@ -23,16 +23,16 @@ client := roku.NewClient("http://192.168.0.21:8060")
 httpClient := &http.Client{} // customise as required
 client := roku.NewClient("http://192.168.0.21:8060", WithHttpClient(httpClient))
 
-// get information about the device
+// information about the device
 info, err := client.DeviceInfo()
 
-// find the active app
+// the active app
 app, err := client.ActiveApp()
 
-// find all apps on the device
+// all apps on the device
 apps, err := client.Apps()
 
-// launch the YouTube app
+// launch the YouTube app with arguments
 youtube := "837"
 err := client.Launch(youtube, "yk8yvt5lWVc", "")
 ```

@@ -27,8 +27,7 @@ type Client struct {
 // ClientOption is a type that can be passed to the NewClient constructor for configuration
 type ClientOption func(*Client)
 
-// NewClient constructs a client using the address argument
-// ClientOptions can be passed in if required
+// NewClient constructs a Client
 func NewClient(addr string, opts ...ClientOption) (*Client, error) {
 	if addr == "" {
 		return &Client{}, errors.New("url is required")
